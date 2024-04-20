@@ -17,9 +17,9 @@ This Next.js template is ready for action, equipped with everything you need to 
 
 1. Clone this repository.
 2. Install dependencies using npm or yarn:
-> i use you can use whatever you want, if you want to use npm for example
-> just change this "packageManager": "pnpm@8.14.1" 
-> to this "packageManager": "npm" and then use the command bellow with your new package manager
+> i use `pnpm` you can use whatever you want, if you want to use `npm` for example
+> just go the `package.json` and change this `"packageManager": "pnpm@8.14.1"` 
+> to this `"packageManager": "npm"` and then use the command bellow with your new package manager
 
 ```bash
 pnpm install
