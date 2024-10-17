@@ -57,7 +57,7 @@ export function DashboardNav({
                   >
                     <Icon className={`ml-3 size-5`} />
 
-                    {isMobileNav || (!isMinimized && !isMobileNav) ? (
+                    {isMobileNav ?? (!isMinimized && !isMobileNav) ? (
                       <span className="mr-2 truncate">{item.title}</span>
                     ) : (
                       ""

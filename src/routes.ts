@@ -3,11 +3,10 @@
  * These routes do not require authentication
  * @type {string[]}
  */
-export const publicRoutes = [
+export const publicRoutes: string[] = [
   "/",
   "/auth/new-verification",
-  "/docs",
-  "/guides"
+  "/contact"
 ];
 
 /**
@@ -15,7 +14,7 @@ export const publicRoutes = [
  * These routes will redirect logged in users to /settings
  * @type {string[]}
  */
-export const authRoutes = [
+export const authRoutes: string[] = [
   "/auth/login",
   "/auth/register",
   "/auth/error",

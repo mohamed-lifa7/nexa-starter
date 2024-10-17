@@ -4,7 +4,6 @@
  */
 await import("./src/env.js");
 
-import { withContentlayer } from "next-contentlayer";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -17,4 +16,4 @@ const nextConfig = {
   },
 };
 
-export default withContentlayer(nextConfig);
+export default nextConfig;

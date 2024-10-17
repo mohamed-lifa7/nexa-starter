@@ -23,7 +23,7 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ table }) => (
       <Checkbox
         checked={
-          table.getIsAllPageRowsSelected() ||
+          table.getIsAllPageRowsSelected() ??
           (table.getIsSomePageRowsSelected() && "indeterminate")
         }
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
