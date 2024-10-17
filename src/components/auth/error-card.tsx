@@ -5,12 +5,13 @@ import { CardWrapper } from "@/components/auth/card-wrapper";
 export const ErrorCard = () => {
   return (
     <CardWrapper
-      headerLabel="Oops! Something went wrong!"
+      headerLabel="Error"
+      descriptionLabel="An error occurred. Please try again."
       backButtonHref="/auth/login"
       backButtonLabel="Back to login"
     >
-      <div className="w-full flex justify-center items-center">
-      <ExclamationTriangleIcon className="text-destructive" />
+      <div className="flex w-full items-center justify-center">
+        <ExclamationTriangleIcon className="text-destructive" />
       </div>
     </CardWrapper>
   );

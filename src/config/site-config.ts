@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 export const siteConfig: Metadata = {
-  metadataBase: new URL("https://muswaddati.vercel.app"),
+  metadataBase: new URL("https://nexa-starter.vercel.app"),
   title: {
-    default: "Muswaddati",
-    template: "%s | Muswaddati",
+    default: "Nexa-Starter",
+    template: "%s | Nexa-Starter",
   },
 
   manifest: "/site.webmanifest",
 
-  applicationName: "Muswaddati",
+  applicationName: "Nexa-Starter",
 
   creator: "Mohamed Lifa",
 
@@ -22,16 +22,16 @@ export const siteConfig: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 
   description:
-    "Muswaddati allows seamless team collaboration on documents in real-time through cloud-based workspaces.",
+    "Nexa-Starter enables developers to quickly launch and scale their SaaS products with a powerful Next.js boilerplate.",
 
   openGraph: {
-    title: "Muswaddati",
+    title: "Nexa-Starter",
     description:
-      "Muswaddati allows seamless team collaboration on documents in real-time through cloud-based workspaces.",
-    siteName: "Muswaddati",
+      "Nexa-Starter enables developers to quickly launch and scale their SaaS products with a powerful Next.js boilerplate.",
+    siteName: "Nexa-Starter",
     locale: "en_US",
-    url: new URL("https://muswaddati.vercel.app"),
-    images: ["https://muswaddati.vercel.app/og-image.png"],
+    url: new URL("https://nexa-starter.vercel.app"),
+    images: ["https://nexa-starter.vercel.app/og-image.png"],
     type: "website",
   },
 
@@ -48,15 +48,15 @@ export const siteConfig: Metadata = {
   },
 
   twitter: {
-    title: "Muswaddati",
+    title: "Nexa-Starter",
     creator: "@LifaSeddik",
     card: "summary_large_image",
-    images: ["https://muswaddati.vercel.app/twitter-og-image.png"],
+    images: ["https://nexa-starter.vercel.app/twitter-og-image.png"],
   },
 };
 
 export const links = {
-  github: "https://github.com/mohamed-lifa7/muswaddati",
+  github: "https://github.com/mohamed-lifa7/nexa-starter",
   twitter: "https://twitter.com/LifaSeddik",
   portfolio: "https://mohamed-lifa7.vercel.app",
 };

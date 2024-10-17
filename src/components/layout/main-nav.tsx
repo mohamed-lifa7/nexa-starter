@@ -4,44 +4,37 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icons";
+import { siteConfig } from "@/config/site-config";
+import { navLinks } from "@/config/nav-links";
 
 export function MainNav() {
   const pathname = usePathname();
   return (
     <div className="mr-4 hidden md:flex">
-      <Link
-        href="/"
-        className="mx-6 flex items-center space-x-2 text-primary dark:text-foreground"
-      >
-        <Icons.logo className="h-6 w-6" />
-        <span className="hidden font-bold sm:inline-block">
-          Muswaddaty
+      <Link href="/" className="mx-6">
+        <span
+          className={cn(
+            "hidden font-bold underline underline-offset-2 sm:inline-block font-mono",
+          )}
+        >
+          {siteConfig.applicationName}.
         </span>
       </Link>
       <nav className="flex items-center space-x-4 text-sm font-medium rtl:space-x-reverse">
-      <Link
-          href="/documents"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/docs/components")
-              ? "text-foreground"
-              : "text-foreground/60",
-          )}
-        >
-          Documentaion
-        </Link>
-        <Link
-          href="/support"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/docs/components")
-              ? "text-foreground"
-              : "text-foreground/60",
-          )}
-        >
-          Support
-        </Link>
+        {navLinks.map((link) => (
+          <Link
+            href={link.href}
+            key={link.href}
+            className={cn(
+              "transition-colors hover:text-foreground/80",
+              pathname?.startsWith("/docs/components")
+                ? "text-foreground"
+                : "text-foreground/60",
+            )}
+          >
+            {link.title}
+          </Link>
+        ))}
       </nav>
     </div>
   );
