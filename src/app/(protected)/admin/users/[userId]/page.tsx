@@ -10,7 +10,8 @@ const breadcrumbItems = [
   { title: "User", link: "/admin/users" },
   { title: "update", link: "/admin/users/update" },
 ];
-export default async function Page({ params }: { params: { userId: string } }) {
+export default async function Page(props: { params: Promise<{ userId: string }> }) {
+  const params = await props.params;
   const user = await getUserById(params.userId);
   return (
     <ScrollArea className="h-full">

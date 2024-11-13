@@ -31,15 +31,13 @@ export default async function RootLayout({
 
   return (
     <SessionProvider session={session}>
-      <html lang="en">
+      <html
+        lang="en"
+        suppressHydrationWarning={process.env.NODE_ENV === "production"}
+      >
         <body className={cn("min-h-screen", GeistSans.className)}>
           <Suspense>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <EdgeStoreProvider>
                 <TooltipProvider>{children}</TooltipProvider>
                 <ThemeToggle className="fixed bottom-2 left-2" />

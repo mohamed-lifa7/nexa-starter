@@ -110,7 +110,7 @@ export const updateUser = async (
 ) => {
   try {
     // Validate userId and values
-    if (!userId ?? !updateUserSchema.safeParse(values).success) {
+    if (!userId || !updateUserSchema.safeParse(values).success) {
       return { error: "Invalid input data" };
     }
 
