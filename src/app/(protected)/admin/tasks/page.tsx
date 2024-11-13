@@ -3,8 +3,6 @@ import path from "path";
 import type { Metadata } from "next";
 import { z } from "zod";
 
-import { columns } from "@/components/admin/tables/tasks-tables/columns";
-import { DataTable } from "@/components/admin/tables/tasks-tables/data-table";
 import { taskSchema } from "@/schemas";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { TasksClient } from "@/components/admin/tables/tasks-tables/client";
